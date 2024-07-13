@@ -12,7 +12,7 @@ from rich.console import Console
 from rich.prompt import Prompt, IntPrompt
 from rich.text import Text
 from rich.style import Style
-from cpmnuker import CPMNuker
+from cpmnuker import CPMClemente
 
 __CHANNEL_USERNAME__ = "CPMClemente"
 __GROUP_USERNAME__   = "CLEMEMTE"
@@ -40,12 +40,12 @@ def gradient_text(text, colors):
 
 def banner(console):
     os.system('cls' if os.name == 'nt' else 'clear')
-    brand_name =  " ██████╗██████╗ ███╗   ███╗███╗   ██╗██╗   ██╗██╗  ██╗███████╗██████╗\n"
-    brand_name += "██╔════╝██╔══██╗████╗ ████║████╗  ██║██║   ██║██║ ██╔╝██╔════╝██╔══██╗\n"
-    brand_name += "██║     ██████╔╝██╔████╔██║██╔██╗ ██║██║   ██║█████╔╝ █████╗  ██████╔╝\n"
-    brand_name += "██║     ██╔═══╝ ██║╚██╔╝██║██║╚██╗██║██║   ██║██╔═██╗ ██╔══╝  ██╔══██╗\n"
-    brand_name += "╚██████╗██║     ██║ ╚═╝ ██║██║ ╚████║╚██████╔╝██║  ██╗███████╗██║  ██║\n"
-    brand_name += " ╚═════╝╚═╝     ╚═╝     ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝\n"
+    brand_name =  " ████████╗░█████╗░░█████╗░██╗░░░░░░██████╗  ░█████╗░██████╗░███╗░░░███╗\n"
+    brand_name += " ╚══██╔══╝██╔══██╗██╔══██╗██║░░░░░██╔════╝  ██╔══██╗██╔══██╗████╗░████║\n"
+    brand_name += " ░░░██║░░░██║░░██║██║░░██║██║░░░░░╚█████╗░  ██║░░╚═╝██████╔╝██╔████╔██║\n"
+    brand_name += " ░░░██║░░░██║░░██║██║░░██║██║░░░░░░╚═══██╗  ██║░░██╗██╔═══╝░██║╚██╔╝██║\n"
+    brand_name += " ░░░██║░░░╚█████╔╝╚█████╔╝███████╗██████╔╝  ╚█████╔╝██║░░░░░██║░╚═╝░██║\n"
+    brand_name += " ░░░╚═╝░░░░╚════╝░░╚════╝░╚══════╝╚═════╝░  ░╚════╝░╚═╝░░░░░╚═╝░░░░░╚═╝\n"
     colors = [
         "rgb(255,0,0)", "rgb(255,69,0)", "rgb(255,140,0)", "rgb(255,215,0)", "rgb(173,255,47)", 
         "rgb(0,255,0)", "rgb(0,255,255)", "rgb(0,191,255)", "rgb(0,0,255)", "rgb(139,0,255)",
@@ -53,7 +53,7 @@ def banner(console):
     ]
     colorful_text = gradient_text(brand_name, colors)
     console.print(colorful_text)
-    console.print("[bold green]♕ CPMNuker[/bold green]: Car Parking Multiplayer Hacking Tool.")
+    console.print("[bold green]♕ CPMClemente[/bold green]: Car Parking Multiplayer Hacking Tool.")
     console.print(f"[bold green]♕ Telegram[/bold green]: [bold blue]@{__CHANNEL_USERNAME__}[/bold blue] or [bold blue]@{__GROUP_USERNAME__}[/bold blue].")
     console.print("[bold red]==================================================[/bold red]")
     console.print("[bold yellow]! Note[/bold yellow]: Logout from CPM before using this tool !.", end="\n\n")
