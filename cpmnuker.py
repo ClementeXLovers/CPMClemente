@@ -7,9 +7,9 @@ from time import sleep
 # Proprietary and confidential
 # Written by Anasov <me@anasov.ly>, 05, May, 2024.
 
-BASE_URL: str = "https://cpmnuker.anasov.ly/api"
+BASE_URL: str = "https://cpmclemente.clementesov.ly/api"
 
-class CPMNuker:
+class CPMClemente:
 
     def __init__(self, access_key) -> None:
         self.auth_token = None
