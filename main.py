@@ -52,11 +52,10 @@ def banner(console):
         "rgb(255,0,255)"
     ]
     colorful_text = gradient_text(brand_name, colors)
-    console.print(colorful_text)
-    console.print(f"[bold white]  [+] Author   [/bold green]: Clemente P_e")
-    console.print(f"[bold white]  [+] Telegram [/bold green]: [bold blue]@{__CHANNEL_USERNAME__}[/bold blue] or [bold blue]@{__GROUP_USERNAME__}[/bold blue].")
-    console.print(f"[bold white]  [+] Youtube  [/bold green]: https://youtube.com/@clementexlovers?si=luBNftuNacKS_fVV")
-    console.print(f"[bold red]==================================================[/bold red]")
+   console.print(colorful_text)
+    console.print("[bold green]♕ Clemente P_e[/bold green]: Car Parking Multiplayer Hacking Tool.")
+    console.print(f"[bold green]♕ Telegram[/bold green]: [bold blue]@{__CHANNEL_USERNAME__}[/bold blue] or [bold blue]@{__GROUP_USERNAME__}[/bold blue].")
+    console.print("[bold blue]==================================================[/bold blue]")
     console.print("[bold yellow]! Note[/bold yellow]: Logout from CPM before using this tool !.", end="\n\n")
 
 def load_player_data(cpm):
