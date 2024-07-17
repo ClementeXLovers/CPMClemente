@@ -53,7 +53,6 @@ def banner(console):
     ]
     colorful_text = gradient_text(brand_name, colors)
     console.print(colorful_text)
-    console.print("[bold][blue]========[/blue][ Author information ][blue]========[/blue][/bold]")
     console.print("[bold white]  [+] Author   [/bold green]: Clemente P_e")
     console.print(f"[bold white] [+] Telegram [/bold green]: [bold blue]@{__CHANNEL_USERNAME__}[/bold blue] or [bold blue]@{__GROUP_USERNAME__}[/bold blue].")
     console.print("[bold white]  [+] Youtube  [/bold green]: https://youtube.com/@clementexlovers?si=luBNftuNacKS_fVV")
