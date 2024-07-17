@@ -64,10 +64,10 @@ def load_player_data(cpm):
         data = response.get('data')
         if 'floats' in data and 'localID' in data and 'money' in data and 'coin' in data:
             console.print("[bold][blue]========[/blue][ Player Information ][blue]========[/blue][/bold]")
-            console.print(f"[bold green]>> Name   [/bold green]: { (data.get('Name') if '>> Name' in data else 'UNDEFINED') }.")
-            console.print(f"[bold green]>> User ID[/bold green]: { (data.get('localID') if '>> User ID' in data else 'UNDEFINED') }.")
-            console.print(f"[bold green]>> Money  [/bold green]: { (data.get('money') if '>> Money' in data else 'UNDEFINED') }.")
-            console.print(f"[bold green]>> Coin  [/bold green]: { (data.get('coin') if '>> Coin' in data else 'UNDEFINED') }.", end="\n\n")
+            console.print(f"[bold white]>> Name   [/bold white]: { (data.get('Name') if 'Name' in data else 'UNDEFINED') }.")
+            console.print(f"[bold white]>> User ID[/bold white]: { (data.get('localID') if 'User ID' in data else 'UNDEFINED') }.")
+            console.print(f"[bold white]>> Money  [/bold white]: { (data.get('money') if 'Money' in data else 'UNDEFINED') }.")
+            console.print(f"[bold white]>> Coin  [/bold white]: { (data.get('coin') if 'Coin' in data else 'UNDEFINED') }.", end="\n\n")
         else:
             console.print("[bold red]! ERROR[/bold red]: new accounts most be signed-in to the game at least once !.")
             exit(1)
