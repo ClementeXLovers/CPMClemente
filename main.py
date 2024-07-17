@@ -15,7 +15,7 @@ from rich.style import Style
 from cpmnuker import CPMClemente
 
 __CHANNEL_USERNAME__ = "CPMClemente"
-__GROUP_USERNAME__   = "Clemente P_e"
+__GROUP_USERNAME__   = "Clemente"
 
 def signal_handler(sig, frame):
     print("\n Bye Bye...")
