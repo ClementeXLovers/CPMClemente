@@ -63,11 +63,11 @@ def load_player_data(cpm):
     if response.get('ok'):
         data = response.get('data')
         if 'floats' in data and 'localID' in data and 'money' in data and 'coin' in data:
-            console.print("[bold][red]========[/red][ PLAYER DETAILS ][red]========[/red][/bold]")
-            console.print(f"[bold green]Name   [/bold green]: { (data.get('Name') if 'Name' in data else 'UNDEFINED') }.")
-            console.print(f"[bold green]LocalID[/bold green]: { (data.get('localID') if 'localID' in data else 'UNDEFINED') }.")
-            console.print(f"[bold green]Money  [/bold green]: { (data.get('money') if 'money' in data else 'UNDEFINED') }.")
-            console.print(f"[bold green]Coins  [/bold green]: { (data.get('coin') if 'coin' in data else 'UNDEFINED') }.", end="\n\n")
+            console.print("[bold][blue]========[/blue][ Player Information ][blue]========[/blue][/bold]")
+            console.print(f"[bold green]>> Name   [/bold green]: { (data.get('Name') if '>> Name' in data else 'UNDEFINED') }.")
+            console.print(f"[bold green]>> User ID[/bold green]: { (data.get('localID') if '>> User ID' in data else 'UNDEFINED') }.")
+            console.print(f"[bold green]>> Money  [/bold green]: { (data.get('money') if '>> Money' in data else 'UNDEFINED') }.")
+            console.print(f"[bold green]>> Coin  [/bold green]: { (data.get('coin') if '>> Coin' in data else 'UNDEFINED') }.", end="\n\n")
         else:
             console.print("[bold red]! ERROR[/bold red]: new accounts most be signed-in to the game at least once !.")
             exit(1)
@@ -77,10 +77,10 @@ def load_player_data(cpm):
 
 def load_key_data(cpm):
     data = cpm.get_key_data()
-    console.print("[bold][red]========[/red][ ACCESS KEY DETAILS ][red]========[/red][/bold]")
-    console.print(f"[bold green]Access Key [/bold green]: { data.get('access_key') }.")
-    console.print(f"[bold green]Telegram ID[/bold green]: { data.get('telegram_id') }.")
-    console.print(f"[bold green]Credits    [/bold green]: { (data.get('coins') if not data.get('is_unlimited') else 'Unlimited') }.", end="\n\n")
+    console.print("[bold][blue]========[/blue][ ACCESS KEY DETAILS ][blue]========[/blue][/bold]")
+    console.print(f"[bold white]Access Key [/bold white]: { data.get('access_key') }.")
+    console.print(f"[bold white]Telegram ID[/bold white]: { data.get('telegram_id') }.")
+    console.print(f"[bold white]Credits    [/bold white]: { (data.get('coins') if not data.get('is_unlimited') else 'Unlimited') }.", end="\n\n")
 
 def prompt_valid_value(content, tag, password=False):
     while True:
