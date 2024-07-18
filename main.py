@@ -64,10 +64,10 @@ def load_player_data(cpm):
         data = response.get('data')
         if 'floats' in data and 'localID' in data and 'money' in data and 'coin' in data:
             console.print("[bold][blue]========[/blue][ Player Information ][blue]========[/blue][/bold]")
-            console.print(f"[bold white]>> Name   [/bold white]: { (data.get('Name') if 'Name' in data else 'UNDEFINED') }.")
-            console.print(f"[bold white >> User ID[/bold white]: { (data.get('localID') if 'localID' in data else 'UNDEFINED') }.")
-            console.print(f"[bold white]>> Money  [/bold white]: { (data.get('money') if 'money' in data else 'UNDEFINED') }.")
-            console.print(f"[bold white]>> Coin   [/bold white]: { (data.get('coin') if 'coin' in data else 'UNDEFINED') }.", end="\n\n")
+            console.print(f"[bold white]>> Name    [/bold white]: { (data.get('Name') if 'Name' in data else 'UNDEFINED') }.")
+            console.print(f"[bold white >> User ID [/bold white]: { (data.get('localID') if 'localID' in data else 'UNDEFINED') }.")
+            console.print(f"[bold white]>> Money   [/bold white]: { (data.get('money') if 'money' in data else 'UNDEFINED') }.")
+            console.print(f"[bold white]>> Coin    [/bold white]: { (data.get('coin') if 'coin' in data else 'UNDEFINED') }.", end="\n\n")
         else:
             console.print("[bold red]! ERROR[/bold red]: new accounts most be signed-in to the game at least once !.")
             exit(1)
@@ -78,7 +78,7 @@ def load_player_data(cpm):
 def load_key_data(cpm):
     data = cpm.get_key_data()
     console.print("[bold][blue]========[/blue][ MENU ][blue]========[/blue][/bold]")
-    console.print(f"[bold white]Access Code [/bold white]: { data.get('access_key') }.")
+    console.print(f"[bold white]Access Code[/bold white]: { data.get('access_key') }.")
     console.print(f"[bold white]Telegram ID[/bold white]: { data.get('telegram_id') }.")
     console.print(f"[bold white]Credits    [/bold white]: { (data.get('coins') if not data.get('is_unlimited') else 'Unlimited') }.", end="\n\n")
 
