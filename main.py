@@ -77,7 +77,7 @@ def load_player_data(cpm):
 
 def load_key_data(cpm):
     data = cpm.get_key_data()
-    console.print("[bold][blue]========================[/blue][ MENU ][blue]==============[/blue][/bold]")
+    console.print("[bold][blue]===================[/blue][ MENU ][blue]=============[/blue][/bold]")
     console.print(f"[bold white]Access Code [/bold white]: { data.get('access_key') }.")
     console.print(f"[bold white]Telegram ID [/bold white]: { data.get('telegram_id') }.")
     console.print(f"[bold white]Credits     [/bold white]: { (data.get('coins') if not data.get('is_unlimited') else 'Unlimited') }.", end="\n\n")
