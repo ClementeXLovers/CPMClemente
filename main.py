@@ -65,7 +65,7 @@ def load_player_data(cpm):
         if 'floats' in data and 'localID' in data and 'money' in data and 'coin' in data:
             console.print("[bold][blue]========[/blue][ Player Information ][blue]========[/blue][/bold]")
             console.print(f"[bold white]>> Name    [/bold white]: { (data.get('Name') if 'Name' in data else 'UNDEFINED') }.")
-            console.print(f"[bold white >> User ID [/bold white]: { (data.get('localID') if 'localID' in data else 'UNDEFINED') }.")
+            console.print(f"[bold white]>> User ID [/bold white]: { (data.get('localID') if 'localID' in data else 'UNDEFINED') }.")
             console.print(f"[bold white]>> Money   [/bold white]: { (data.get('money') if 'money' in data else 'UNDEFINED') }.")
             console.print(f"[bold white]>> Coin    [/bold white]: { (data.get('coin') if 'coin' in data else 'UNDEFINED') }.", end="\n\n")
         else:
