@@ -64,10 +64,10 @@ def load_player_data(cpm):
         data = response.get('data')
         if 'floats' in data and 'localID' in data and 'money' in data and 'coin' in data:
             console.print("[bold][blue]========[/blue][ Player Information ][blue]========[/blue][/bold]")
-            console.print(f"[bold white]>> Name    [/bold white]: { (data.get('Name') if 'Name' in data else 'UNDEFINED') }.")
-            console.print(f"[bold white]>> User ID [/bold white]: { (data.get('localID') if 'localID' in data else 'UNDEFINED') }.")
-            console.print(f"[bold white]>> Money   [/bold white]: { (data.get('money') if 'money' in data else 'UNDEFINED') }.")
-            console.print(f"[bold white]>> Coin    [/bold white]: { (data.get('coin') if 'coin' in data else 'UNDEFINED') }.", end="\n\n")
+            console.print(f"[bold white]>> Name   [/bold white]: { (data.get('Name') if 'Name' in data else 'UNDEFINED') }.")
+            console.print(f"[bold white >> User ID[/bold white]: { (data.get('localID') if 'localID' in data else 'UNDEFINED') }.")
+            console.print(f"[bold white]>> Money  [/bold white]: { (data.get('money') if 'money' in data else 'UNDEFINED') }.")
+            console.print(f"[bold white]>> Coin   [/bold white]: { (data.get('coin') if 'coin' in data else 'UNDEFINED') }.", end="\n\n")
         else:
             console.print("[bold red]! ERROR[/bold red]: new accounts most be signed-in to the game at least once !.")
             exit(1)
@@ -77,8 +77,8 @@ def load_player_data(cpm):
 
 def load_key_data(cpm):
     data = cpm.get_key_data()
-    console.print("[bold][blue]========[/blue][ Acces key details ][blue]========[/blue][/bold]")
-    console.print(f"[bold white]Access Key [/bold white]: { data.get('access_key') }.")
+    console.print("[bold][blue]========[/blue][ MENU ][blue]========[/blue][/bold]")
+    console.print(f"[bold white]Access Code [/bold white]: { data.get('access_key') }.")
     console.print(f"[bold white]Telegram ID[/bold white]: { data.get('telegram_id') }.")
     console.print(f"[bold white]Credits    [/bold white]: { (data.get('coins') if not data.get('is_unlimited') else 'Unlimited') }.", end="\n\n")
 
@@ -112,9 +112,9 @@ if __name__ == "__main__":
     signal.signal(signal.SIGINT, signal_handler)
     while True:
         banner(console)
-        acc_email = prompt_valid_value("[bold][?] Account Email[/bold]", "Email", password=False)
-        acc_password = prompt_valid_value("[bold][?] Account Password[/bold]", "Password", password=False)
-        acc_access_key = prompt_valid_value("[bold][?] Access Key[/bold]", "Access Key", password=False)
+        acc_email = prompt_valid_value("[bold][01] Account Email[/bold]", "Email", password=False)
+        acc_password = prompt_valid_value("[bold][02] Account Password[/bold]", "Password", password=False)
+        acc_access_key = prompt_valid_value("[bold][03] Access Code[/bold]", "Access Code", password=False)
         console.print("[bold cyan][%] Trying to Login[/bold cyan]: ", end=None)
         cpm = CPMClemente(acc_access_key)
         login_response = cpm.login(acc_email, acc_password)
